@@ -1,0 +1,30 @@
+<html>
+    <script src="https://unimedrp--dev.sandbox.my.site.com/corretoras/lightning/lightning.out.js"></script>
+
+    <div data-lightning-out="true"></div>
+
+    <script>
+        const appName = 'c:WebToCaseCorretorasApp';
+        const componentName = 'c:CustomWebToCaseCorretoras';
+        const lightningEndpoint = 'https://unimedrp--dev.sandbox.my.site.com';
+        const targetElement = document.querySelector("[data-lightning-out]");
+        const componentAttributes = {
+    
+        };
+    
+        $Lightning.use(
+            appName,
+            function(){
+                $Lightning.createComponent(
+                    componentName,
+                    componentAttributes,
+                    targetElement,
+                    function(cmp){
+                        console.log('@cac funcionando');
+                    }
+                );
+            },
+            lightningEndpoint
+        );
+    </script>
+</html>
